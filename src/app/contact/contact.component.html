@@ -1,0 +1,38 @@
+<section class="contact-container">
+    <h1>Let's Talk.</h1>
+    <p>
+        Get in touch via the form below, or by emailing
+        <a href="mailto:talni250@gmail.com?subject=Hello">talni250@gmail.com</a>.
+    </p>
+
+
+    <form (ngSubmit)="sendForm($event)">
+
+        <label for="theName">Name: </label>
+        <input name="someUsername" #nameInput="ngModel" [(ngModel)]="username" required minlength="2" class="inputs"
+            type="text" id="theName" placeholder="Enter Your Name">
+        <p *ngIf="nameInput.invalid&&nameInput.dirty">
+            Name is required and needs to be at least 2 characters long.
+        </p>
+
+
+        <label for="theEmail">Email Address: </label>
+        <input autocomplete="off" name="someEmail" #emailInput="ngModel" [(ngModel)]="email" required email class="inputs" minlength="5"
+            type="email" id="theEmail" placeholder="Enter Your Email">
+
+            <p *ngIf="emailInput.invalid&&emailInput.dirty">
+                Email is required and needs to be at least 5 characters long
+            </p>
+
+
+        <label for="theMsg">Message: </label>
+        <textarea name="someMessage" #msgInput="ngModel" [(ngModel)]="msg" required class="inputs" id="theMsg"
+            placeholder="Enter Your Message"></textarea>
+            <p *ngIf="msgInput.invalid&&msgInput.dirty">
+               Please Enter Any Text.
+            </p>
+
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+<!-- <app-socials ></app-socials> -->
+</section>

@@ -1,0 +1,24 @@
+nav {
+    .nav-container {
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            li {
+                margin-right: 6%;
+                cursor: pointer;
+                transition: 0.3s;
+                padding: 5px;
+                border-radius: 10px;
+                outline: none;
+
+                &:hover {
+                    color: #f0860c;
+                }
+            }
+            .active-route {
+                color: #f0860c;
+            }
+        }
+    }
+}

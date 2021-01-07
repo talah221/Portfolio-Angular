@@ -1,0 +1,42 @@
+.home-container {
+    margin-top: 5%;
+	animation: swing-in-top-fwd 0.5s steps(300, end) both;
+
+    .my-info {
+        h2 {
+            font-size: 38px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p {
+            font-weight: 100;
+            color: lightgray;
+        }
+        a {
+            transition: 0.8s;
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: #f0860c;
+                &::after {
+                    content: " →";
+                }
+            }
+        }
+    }
+}
+
+@keyframes swing-in-top-fwd {
+    0% {
+      transform: rotateX(-100deg);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+  
